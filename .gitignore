@@ -27,3 +27,6 @@ fp-info-cache
 
 # Filesystem metadata
 *.DS_Store
+
+# Build directory
+build/
