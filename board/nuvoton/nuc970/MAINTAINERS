@@ -1,0 +1,6 @@
+NUC970 BOARD
+M:	Chi-Wen Weng <cwweng@nuvoton.com>
+S:	Maintained
+F:	board/nuvoton/nuc970/
+F:	include/configs/nuc970_evb.h
+F:	configs/nuc970_defconfig
