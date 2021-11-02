@@ -1,0 +1,31 @@
+config MTD_SPINAND_MT29F
+	tristate "SPINAND Device Support"
+	depends on MTD_NAND && SPI
+	help
+	  This enables support for accessing SPI NAND flash
+	  devices.
+	  If you have SPI NAND chip say yes.
+
+	  If unsure, say no here.
+
+config MTD_SPINAND_ONDIEECC
+	bool
+	default y if MTD_SPINAND_MT29F
+
+config MTD_SPINAND_GIGADEVICE
+	bool
+	default y if MTD_SPINAND_MT29F
+
+config WINBOND_W25N02
+	tristate "Winbond W25N02 SPI NAND Support"
+	depends on MTD_SPINAND_MT29F
+	help
+	  This enables support for W25N02 SPI NAND flash.
+	  For instance, Winbond W25N02 SPI NAND flash.
+
+config WINBOND_MULTIDIE
+	tristate "Winbond Multi-Die SPI NAND Support"
+	depends on MTD_SPINAND_MT29F
+	help
+	  This enables support for Winbond multi-die SPI NAND flash.
+	  For instance, Winbond W25N02GV SPI NAND flash.
