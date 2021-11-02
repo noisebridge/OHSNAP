@@ -1,0 +1,6 @@
+NUC980 BOARD
+M:	Chi-Wen Weng <cwweng@nuvoton.com>
+S:	Maintained
+F:	board/nuvoton/nuc980/
+F:	include/configs/nuc980_evb.h
+F:	configs/nuc980_defconfig

@@ -1,0 +1,230 @@
+/*
+ * NUC980 GPIO header file
+ * Copyright (c) 2019 Nuvoton Technology Corporation
+ * All rights reserved.
+ */
+
+#ifndef __NUC980_REGS_GPIO_H
+#define __NUC980_REGS_GPIO_H
+
+/* Global control registers */
+#define REG_MFP_GPA_L   0xB0000070
+#define GPIO_BA		0xB0004000
+
+#define REG_GPIOA_MODE      (GPIO_BA+0x000)
+#define REG_GPIOA_DINOFF    (GPIO_BA+0x004)
+#define REG_GPIOA_DOUT      (GPIO_BA+0x008)
+#define REG_GPIOA_DATMSK    (GPIO_BA+0x00C)
+#define REG_GPIOA_PIN       (GPIO_BA+0x010)
+#define REG_GPIOA_DBEN      (GPIO_BA+0x014)
+#define REG_GPIOA_INTTYPE (GPIO_BA+0x018)
+#define REG_GPIOA_INTEN     (GPIO_BA+0x01C)
+#define REG_GPIOA_INTSRC    (GPIO_BA+0x020)
+#define REG_GPIOA_SMTEN     (GPIO_BA+0x024)
+#define REG_GPIOA_SLEWCTL (GPIO_BA+0x028)
+#define REG_GPIOA_PUSEL     (GPIO_BA+0x030)
+
+#define REG_GPIOB_MODE      (GPIO_BA+0x040)
+#define REG_GPIOB_DINOFF    (GPIO_BA+0x044)
+#define REG_GPIOB_DOUT      (GPIO_BA+0x048)
+#define REG_GPIOB_DATMSK    (GPIO_BA+0x04C)
+#define REG_GPIOB_PIN       (GPIO_BA+0x050)
+#define REG_GPIOB_DBEN      (GPIO_BA+0x054)
+#define REG_GPIOB_INTTYPE (GPIO_BA+0x058)
+#define REG_GPIOB_INTEN     (GPIO_BA+0x05C)
+#define REG_GPIOB_INTSRC    (GPIO_BA+0x060)
+#define REG_GPIOB_SMTEN     (GPIO_BA+0x064)
+#define REG_GPIOB_SLEWCTL (GPIO_BA+0x068)
+#define REG_GPIOB_PUSEL     (GPIO_BA+0x070)
+
+#define REG_GPIOC_MODE      (GPIO_BA+0x080)
+#define REG_GPIOC_DINOFF    (GPIO_BA+0x084)
+#define REG_GPIOC_DOUT      (GPIO_BA+0x088)
+#define REG_GPIOC_DATMSK    (GPIO_BA+0x08C)
+#define REG_GPIOC_PIN       (GPIO_BA+0x090)
+#define REG_GPIOC_DBEN      (GPIO_BA+0x094)
+#define REG_GPIOC_INTTYPE (GPIO_BA+0x098)
+#define REG_GPIOC_INTEN     (GPIO_BA+0x09C)
+#define REG_GPIOC_INTSRC    (GPIO_BA+0x0A0)
+#define REG_GPIOC_SMTEN     (GPIO_BA+0x0A4)
+#define REG_GPIOC_SLEWCTL (GPIO_BA+0x0A8)
+#define REG_GPIOC_PUSEL     (GPIO_BA+0x0B0)
+
+#define REG_GPIOD_MODE      (GPIO_BA+0x0C0)
+#define REG_GPIOD_DINOFF    (GPIO_BA+0x0C4)
+#define REG_GPIOD_DOUT      (GPIO_BA+0x0C8)
+#define REG_GPIOD_DATMSK    (GPIO_BA+0x0CC)
+#define REG_GPIOD_PIN       (GPIO_BA+0x0D0)
+#define REG_GPIOD_DBEN      (GPIO_BA+0x0D4)
+#define REG_GPIOD_INTTYPE (GPIO_BA+0x0D8)
+#define REG_GPIOD_INTEN     (GPIO_BA+0x0DC)
+#define REG_GPIOD_INTSRC    (GPIO_BA+0x0E0)
+#define REG_GPIOD_SMTEN     (GPIO_BA+0x0E4)
+#define REG_GPIOD_SLEWCTL (GPIO_BA+0x0E8)
+#define REG_GPIOD_PUSEL     (GPIO_BA+0x0F0)
+
+#define REG_GPIOE_MODE      (GPIO_BA+0x100)
+#define REG_GPIOE_DINOFF    (GPIO_BA+0x104)
+#define REG_GPIOE_DOUT      (GPIO_BA+0x108)
+#define REG_GPIOE_DATMSK    (GPIO_BA+0x10C)
+#define REG_GPIOE_PIN       (GPIO_BA+0x110)
+#define REG_GPIOE_DBEN      (GPIO_BA+0x114)
+#define REG_GPIOE_INTTYPE (GPIO_BA+0x118)
+#define REG_GPIOE_INTEN     (GPIO_BA+0x11C)
+#define REG_GPIOE_INTSRC    (GPIO_BA+0x120)
+#define REG_GPIOE_SMTEN     (GPIO_BA+0x124)
+#define REG_GPIOE_SLEWCTL (GPIO_BA+0x128)
+#define REG_GPIOE_PUSEL     (GPIO_BA+0x130)
+
+#define REG_GPIOF_MODE      (GPIO_BA+0x140)
+#define REG_GPIOF_DINOFF    (GPIO_BA+0x144)
+#define REG_GPIOF_DOUT      (GPIO_BA+0x148)
+#define REG_GPIOF_DATMSK    (GPIO_BA+0x14C)
+#define REG_GPIOF_PIN       (GPIO_BA+0x150)
+#define REG_GPIOF_DBEN      (GPIO_BA+0x154)
+#define REG_GPIOF_INTTYPE (GPIO_BA+0x158)
+#define REG_GPIOF_INTEN     (GPIO_BA+0x15C)
+#define REG_GPIOF_INTSRC    (GPIO_BA+0x160)
+#define REG_GPIOF_SMTEN     (GPIO_BA+0x164)
+#define REG_GPIOF_SLEWCTL (GPIO_BA+0x168)
+#define REG_GPIOF_PUSEL     (GPIO_BA+0x170)
+
+#define REG_GPIOG_MODE      (GPIO_BA+0x180)
+#define REG_GPIOG_DINOFF    (GPIO_BA+0x184)
+#define REG_GPIOG_DOUT      (GPIO_BA+0x188)
+#define REG_GPIOG_DATMSK    (GPIO_BA+0x18C)
+#define REG_GPIOG_PIN       (GPIO_BA+0x190)
+#define REG_GPIOG_DBEN      (GPIO_BA+0x194)
+#define REG_GPIOG_INTTYPE (GPIO_BA+0x198)
+#define REG_GPIOG_INTEN     (GPIO_BA+0x19C)
+#define REG_GPIOG_INTSRC    (GPIO_BA+0x1A0)
+#define REG_GPIOG_SMTEN     (GPIO_BA+0x1A4)
+#define REG_GPIOG_SLEWCTL (GPIO_BA+0x1A8)
+#define REG_GPIOG_PUSEL     (GPIO_BA+0x1B0)
+
+#define REG_GPIO_DBNCECON   (GPIO_BA+0x440)
+
+#define GPIO_PIN_DATA_BASE (GPIO_BA+0x800)
+/* Define GPIO Pin Data Input/Output. It could be used to control each I/O pin by pin address mapping. */
+#define GPIO_PIN_DATA(port, pin)    (*((volatile uint32_t *)((GPIO_PIN_DATA_BASE+(0x40*(port))) + ((pin)<<2))))
+
+
+#define GPIO_OFFSET 0x20
+#define DRIVER_NAME "nuc980-gpio"
+#define NUMGPIO 0x20 * 7    //(PortA~PortG)
+
+
+#define GPIO_PA0	0
+#define GPIO_PA1	1
+#define GPIO_PA2	2
+#define GPIO_PA3	3
+#define GPIO_PA4	4
+#define GPIO_PA5	5
+#define GPIO_PA6	6
+#define GPIO_PA7	7
+#define GPIO_PA8	8
+#define GPIO_PA9	9
+#define GPIO_PA10	10
+#define GPIO_PA11	11
+#define GPIO_PA12	12
+#define GPIO_PA13	13
+#define GPIO_PA14	14
+#define GPIO_PA15	15
+#define GPIO_PB0	32
+#define GPIO_PB1	33
+#define GPIO_PB2	34
+#define GPIO_PB3	35
+#define GPIO_PB4	36
+#define GPIO_PB5	37
+#define GPIO_PB6	38
+#define GPIO_PB7	39
+#define GPIO_PB8	40
+#define GPIO_PB9	41
+#define GPIO_PB10	42
+#define GPIO_PB11	43
+#define GPIO_PB12	44
+#define GPIO_PB13	45
+#define GPIO_PB14	46
+#define GPIO_PB15	47
+#define GPIO_PC0	(2*GPIO_OFFSET + 0)
+#define GPIO_PC1	(2*GPIO_OFFSET + 1)
+#define GPIO_PC2	(2*GPIO_OFFSET + 2)
+#define GPIO_PC3	(2*GPIO_OFFSET + 3)
+#define GPIO_PC4	(2*GPIO_OFFSET + 4)
+#define GPIO_PC5	(2*GPIO_OFFSET + 5)
+#define GPIO_PC6	(2*GPIO_OFFSET + 6)
+#define GPIO_PC7	(2*GPIO_OFFSET + 7)
+#define GPIO_PC8	(2*GPIO_OFFSET + 8)
+#define GPIO_PC9	(2*GPIO_OFFSET + 9)
+#define GPIO_PC10	(2*GPIO_OFFSET + 10)
+#define GPIO_PC11	(2*GPIO_OFFSET + 11)
+#define GPIO_PC12	(2*GPIO_OFFSET + 12)
+#define GPIO_PC13	(2*GPIO_OFFSET + 13)
+#define GPIO_PC14	(2*GPIO_OFFSET + 14)
+#define GPIO_PC15	(2*GPIO_OFFSET + 15)
+#define GPIO_PD0	(3*GPIO_OFFSET + 0)
+#define GPIO_PD1	(3*GPIO_OFFSET + 1)
+#define GPIO_PD2	(3*GPIO_OFFSET + 2)
+#define GPIO_PD3	(3*GPIO_OFFSET + 3)
+#define GPIO_PD4	(3*GPIO_OFFSET + 4)
+#define GPIO_PD5	(3*GPIO_OFFSET + 5)
+#define GPIO_PD6	(3*GPIO_OFFSET + 6)
+#define GPIO_PD7	(3*GPIO_OFFSET + 7)
+#define GPIO_PD8	(3*GPIO_OFFSET + 8)
+#define GPIO_PD9	(3*GPIO_OFFSET + 9)
+#define GPIO_PD10	(3*GPIO_OFFSET + 10)
+#define GPIO_PD11	(3*GPIO_OFFSET + 11)
+#define GPIO_PD12	(3*GPIO_OFFSET + 12)
+#define GPIO_PD13	(3*GPIO_OFFSET + 13)
+#define GPIO_PD14	(3*GPIO_OFFSET + 14)
+#define GPIO_PD15	(3*GPIO_OFFSET + 15)
+#define GPIO_PE0	(4*GPIO_OFFSET + 0)
+#define GPIO_PE1	(4*GPIO_OFFSET + 1)
+#define GPIO_PE2	(4*GPIO_OFFSET + 2)
+#define GPIO_PE3	(4*GPIO_OFFSET + 3)
+#define GPIO_PE4	(4*GPIO_OFFSET + 4)
+#define GPIO_PE5	(4*GPIO_OFFSET + 5)
+#define GPIO_PE6	(4*GPIO_OFFSET + 6)
+#define GPIO_PE7	(4*GPIO_OFFSET + 7)
+#define GPIO_PE8	(4*GPIO_OFFSET + 8)
+#define GPIO_PE9	(4*GPIO_OFFSET + 9)
+#define GPIO_PE10	(4*GPIO_OFFSET + 10)
+#define GPIO_PE11	(4*GPIO_OFFSET + 11)
+#define GPIO_PE12	(4*GPIO_OFFSET + 12)
+#define GPIO_PE13	(4*GPIO_OFFSET + 13)
+#define GPIO_PE14	(4*GPIO_OFFSET + 14)
+#define GPIO_PE15	(4*GPIO_OFFSET + 15)
+#define GPIO_PF0	(5*GPIO_OFFSET + 0)
+#define GPIO_PF1	(5*GPIO_OFFSET + 1)
+#define GPIO_PF2	(5*GPIO_OFFSET + 2)
+#define GPIO_PF3	(5*GPIO_OFFSET + 3)
+#define GPIO_PF4	(5*GPIO_OFFSET + 4)
+#define GPIO_PF5	(5*GPIO_OFFSET + 5)
+#define GPIO_PF6	(5*GPIO_OFFSET + 6)
+#define GPIO_PF7	(5*GPIO_OFFSET + 7)
+#define GPIO_PF8	(5*GPIO_OFFSET + 8)
+#define GPIO_PF9	(5*GPIO_OFFSET + 9)
+#define GPIO_PF10	(5*GPIO_OFFSET + 10)
+#define GPIO_PF11	(5*GPIO_OFFSET + 11)
+#define GPIO_PF12	(5*GPIO_OFFSET + 12)
+#define GPIO_PF13	(5*GPIO_OFFSET + 13)
+#define GPIO_PF14	(5*GPIO_OFFSET + 14)
+#define GPIO_PF15	(5*GPIO_OFFSET + 15)
+#define GPIO_PG0	(6*GPIO_OFFSET + 0)
+#define GPIO_PG1	(6*GPIO_OFFSET + 1)
+#define GPIO_PG2	(6*GPIO_OFFSET + 2)
+#define GPIO_PG3	(6*GPIO_OFFSET + 3)
+#define GPIO_PG4	(6*GPIO_OFFSET + 4)
+#define GPIO_PG5	(6*GPIO_OFFSET + 5)
+#define GPIO_PG6	(6*GPIO_OFFSET + 6)
+#define GPIO_PG7	(6*GPIO_OFFSET + 7)
+#define GPIO_PG8	(6*GPIO_OFFSET + 8)
+#define GPIO_PG9	(6*GPIO_OFFSET + 9)
+#define GPIO_PG10	(6*GPIO_OFFSET + 10)
+#define GPIO_PG11	(6*GPIO_OFFSET + 11)
+#define GPIO_PG12	(6*GPIO_OFFSET + 12)
+#define GPIO_PG13	(6*GPIO_OFFSET + 13)
+#define GPIO_PG14	(6*GPIO_OFFSET + 14)
+#define GPIO_PG15	(6*GPIO_OFFSET + 15)
+
+#endif /*  __NUC980_REGS_GPIO_H */
