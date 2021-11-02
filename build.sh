@@ -1,12 +1,19 @@
 #!/bin/sh
 
-# chdir into script directory
-cd `dirname $0`
+SRCDIR="$(cd `dirname $0`; pwd)"
 
 # create build directory
-rm -rf build
-mkdir build
-cd build
+mkdir -p "${SRCDIR}"/build
+cd "${SRCDIR}"/build
+
+# compile qemu
+mkdir -p qemu
+cd qemu
+${SRCDIR}/external/qemu/configure --target-list=arm-softmmu --meson=/usr
+make -j20
+cd ..
+
+exit 0
 
 # create an empty flash memory image
 touch flash.img
