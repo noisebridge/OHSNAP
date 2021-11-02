@@ -1,4 +1,4 @@
 bootdelay=2
-bootargs=root=/dev/ram0 console=ttyS0,115200n8 rdinit=/sbin/init mem=64M initcall_blacklist=ehci_hcd_init,ohci_hcd_mod_init
+bootargs=root=/dev/ram0 console=ttyS0,115200n8 rdinit=/sbin/init mem=64M
 bootcmd=nand read 0x7FC0 0x200000 0x800000; bootm 0x7FC0
 
