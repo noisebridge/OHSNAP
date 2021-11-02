@@ -6,10 +6,11 @@ SRCDIR="$(cd `dirname $0`; pwd)"
 mkdir -p "${SRCDIR}"/build
 cd "${SRCDIR}"/build
 
+
 # compile qemu
 mkdir -p qemu
 cd qemu
-${SRCDIR}/external/qemu/configure --target-list=arm-softmmu --meson=/usr
+${SRCDIR}/external/qemu/configure --target-list=arm-softmmu --meson=${SRCDIR}/external/meson/meson.py
 make -j20
 cd ..
 
