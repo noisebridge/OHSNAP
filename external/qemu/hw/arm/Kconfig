@@ -548,3 +548,8 @@ config ARMSSE
     select UNIMP
     select SSE_COUNTER
     select SSE_TIMER
+
+config NUC980
+    bool
+    select A9MPCORE
+    select ARM_TIMER
