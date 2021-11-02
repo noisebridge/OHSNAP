@@ -1204,6 +1204,7 @@ if test "$plugins" = "yes" -a "$tcg" = "disabled"; then
     error_exit "Can't enable plugins on non-TCG builds"
 fi
 
+: '
 case $git_submodules_action in
     update|validate)
         if test ! -e "$source_path/.git"; then
@@ -1240,6 +1241,7 @@ case $git_submodules_action in
         exit 1
     ;;
 esac
+'
 
 libdir="${libdir:-$prefix/lib}"
 libexecdir="${libexecdir:-$prefix/libexec}"
