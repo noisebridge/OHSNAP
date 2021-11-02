@@ -28,5 +28,5 @@ echo '|                                                            |'
 echo '+------------------------------------------------------------+'
 
 # run QEMU
-/opt/qemu/bin/qemu-system-arm -s -M nuc980-soc -m 64M -bios flash.img -serial stdio -monitor none -nographic 2> qemu.log
+/opt/qemu/bin/qemu-system-arm -s -M nuc980-soc -m 64M -bios flash.img -serial stdio -monitor none -nographic
 
