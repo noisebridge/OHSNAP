@@ -17,8 +17,6 @@ make -j20
 cd ..
 
 # create flash memory image
-mkdir -p images
-cd images
 rm -rf flash.img
 touch flash.img
 truncate -s 32M flash.img
@@ -26,7 +24,6 @@ dd if=${SRCDIR}/boot/u-boot-spl.bin of=flash.img conv=notrunc oflag=seek_bytes s
 dd if=${SRCDIR}/boot/u-boot-env.bin of=flash.img conv=notrunc oflag=seek_bytes seek=512K   2>/dev/null
 dd if=${SRCDIR}/boot/u-boot.bin     of=flash.img conv=notrunc oflag=seek_bytes seek=1024K  2>/dev/null
 dd if=${SRCDIR}/boot/980uimage      of=flash.img conv=notrunc oflag=seek_bytes seek=2048K  2>/dev/null
-cd ..
 
 # echo heading
 echo ''
