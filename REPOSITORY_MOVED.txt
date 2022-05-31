@@ -1,0 +1,8 @@
+The OHSNAP project's repositories have moved to the following location:
+
+https://github.com/trustOHSNAP
+
+The new OHSNAP Server repository is located at https://github.com/trustOHSNAP/OHSNAP-Server
+
+All further development will be done there. Please update your watched & starred projects on GitHub.
+
